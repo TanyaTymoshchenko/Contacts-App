@@ -1,0 +1,23 @@
+.button {
+    align-self: center;
+    padding: 1.5rem;
+    border: 0;
+    background-color: rgb(164, 152, 177);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 250ms linear;
+}
+
+.button:hover,
+.button:focus {
+    background-color: rgb(186, 214, 215);
+}
+
+.auth-btn {
+    background: rgb(183, 183, 183);
+}
+
+.auth-btn:hover,
+.auth-btn:focus {
+    background: rgb(140, 153, 221);
+}

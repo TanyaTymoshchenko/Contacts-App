@@ -1,0 +1,19 @@
+@media screen and (min-width: 768px) {
+    .top-container {
+        display: flex;
+        column-gap: 3rem;
+        flex-wrap: wrap;
+    }
+}
+
+.main-title {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 4.5rem;
+}
+
+@media screen and (min-width: 700px) {
+    .main-title {
+        font-size: 4.5rem;
+    }
+}
