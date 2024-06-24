@@ -1,6 +1,5 @@
-import React from 'react';
-import Modal from 'react-modal';
-import './CustomModal.css';
+import Modal from "react-modal";
+import css from "./Modal.module.css";
 
 Modal.setAppElement("#App");
 
@@ -9,7 +8,7 @@ const CustomModal = ({ closeModal, modalIsOpen, type, deleteContact }) => {
     <Modal 
       isOpen={modalIsOpen} 
       onRequestClose={closeModal}
-      className="custom-modal"
+      className={css.modal}
       overlayClassName="custom-overlay"
     >
       {type === "deleteContactModal" && (
