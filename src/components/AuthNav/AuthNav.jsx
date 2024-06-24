@@ -5,7 +5,7 @@ const AuthNav = () => {
   return (
     <div className={css["auth-bar"]}>
       <CustomNavLink to="/register">Register</CustomNavLink>
-      <CustomNavLink to="/login">Login</CustomNavLink>
+      <CustomNavLink to="/login">Log In</CustomNavLink>
     </div>
   );
 };

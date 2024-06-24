@@ -1,11 +1,11 @@
 .text {
-    font-size: 16px;
-    margin-bottom: 1rem;
+    font-size: 20px;
+    margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 500px) {
     .text {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
 
@@ -15,11 +15,11 @@
 
 .accented {
     color: rgb(7, 7, 7);
-    font-size: 20px;
+    font-size: 24px;
 }
 
 @media screen and (min-width: 500px) {
     .accented {
-        font-size: 24px;
+        font-size: 28px;
     }
 }

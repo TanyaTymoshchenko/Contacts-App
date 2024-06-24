@@ -1,5 +1,5 @@
 {
-  "name": "goit-react-hw-03",
+  "name": "goit-react-hw-08",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@reduxjs/toolkit": "^2.2.5",
     "axios": "^1.7.2",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "modern-normalize": "^2.0.0",
     "nanoid": "^5.0.7",
+    "persistor": "^2.11.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",

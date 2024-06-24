@@ -7,10 +7,10 @@ const HomePage = () => {
     <Section type="home-page">
       <Container>
         <Text isCentered accented>
-          Welcome To The Contacts App!
+          Welcome to the Modern Contacts App! 📖
         </Text>
         <Text isCentered>
-          You can register, login, and keep your contacts here.
+           Manage your contacts easily and securely. 🔒
         </Text>
       </Container>
     </Section>

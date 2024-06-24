@@ -23,7 +23,7 @@ const LoginForm = () => {
       <BaseForm onSubmit={onSubmit}>
         <Button type="auth">Log in</Button>
       </BaseForm>
-      {isLoading && <Loader>Sending your data. Please, wait.</Loader>}
+      {isLoading && <Loader>Sending your data. Please, wait...</Loader>}
     </div>
   );
 };

@@ -26,7 +26,7 @@ const ContactsPage = () => {
           <ContactForm />
           <SearchBox />
         </div>
-        {isLoading && <p>Loading contacts. Please, wait</p>}
+        {isLoading && <p>Loading contacts. Please, wait...</p>}
         {error && <p>{error}</p>}
         <ContactList />
       </Container>

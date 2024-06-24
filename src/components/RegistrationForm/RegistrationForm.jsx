@@ -23,7 +23,7 @@ const RegistrationForm = () => {
       <BaseForm onSubmit={onSubmit} isRegistrationForm>
         <Button type="auth">Register</Button>
       </BaseForm>
-      {isLoading && <Loader>Sending your data. Please, wait.</Loader>}
+      {isLoading && <Loader>Sending your data. Please, wait...</Loader>}
     </div>
   );
 };

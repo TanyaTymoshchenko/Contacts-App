@@ -11,7 +11,6 @@ export default function ContactForm() {
   const nameId = useId();
   const numberId = useId();
 
-  // ====================== HANDLE VALIDATION
   const AddContactSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, "Too Short!")
@@ -20,7 +19,6 @@ export default function ContactForm() {
     number: Yup.string().min(8, "Too Short!").required("Required"),
   });
 
-  // ======================= HANDLE SUBMIT
   const dispatch = useDispatch();
 
   function handleSubmit(values, actions) {
