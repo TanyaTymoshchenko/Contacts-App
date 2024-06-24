@@ -52,7 +52,7 @@ const BaseForm = ({ children, onSubmit, isRegistrationForm }) => {
         {isRegistrationForm && (
           <div className={css["form-group"]}>
             <label className={css.label} htmlFor="name">
-              Your name
+              Name
             </label>
             <Field className={css["form-field"]} name="name" type="text" />
             <ErrorMessage
@@ -67,7 +67,11 @@ const BaseForm = ({ children, onSubmit, isRegistrationForm }) => {
             Email
           </label>
           <Field className={css["form-field"]} name="email" type="email" />
-          <ErrorMessage className={css["error-message"]} name="email" />
+          <ErrorMessage
+            className={css["error-message"]}
+            name="email"
+            component="div"
+          />
         </div>
         <div className={css["form-group"]}>
           <label className={css.label} htmlFor="password">
@@ -78,7 +82,11 @@ const BaseForm = ({ children, onSubmit, isRegistrationForm }) => {
             name="password"
             type="password"
           />
-          <ErrorMessage className={css["error-message"]} name="password" />
+          <ErrorMessage
+            className={css["error-message"]}
+            name="password"
+            component="div"
+          />
         </div>
         {children}
       </Form>
