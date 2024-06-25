@@ -18,16 +18,16 @@ const HomePage = () => {
             <strong>About our Application:</strong>
           </Text>
           <Text>
-            Our Phone book application is designed to help you to manage your contacts effortlessly. With our user-friendly interface, you can organize your contacts, add new ones, delete existing ones, and quickly find the information you need.
+            Our Contacts application is designed to help you to manage your contacts effortlessly. With our user-friendly interface, you can organize your contacts, add new ones, delete existing ones, and quickly find the information you need.
           </Text>
           <Text>
             <strong>Key Features:</strong>
           </Text>
           <ul className={css.featureList}>
-            <li>Safety: Be sure that your contacts are fully protected and no one except you could access them.</li>
+            <li>Safety: be sure that your contacts are fully protected and no one except you could access them.</li>
             <li>Effortless Management: streamline contact handling. Organize, delete, and find contacts easily.</li>
-            <li>Time Saving: Save time managing contacts. Quickly add, delete, and search for contacts.</li>
-            <li>User-Friendly Interface: Enjoy an intuitive interface. Easily navigate and use the app with minimal learning curve.</li>
+            <li>Time Saving: save time managing contacts. Quickly add, delete, and search for contacts.</li>
+            <li>User-Friendly Interface: enjoy our intuitive interface. Easily navigate and use the app with minimal user experience.</li>
           </ul>
         </div>
       </Container>
