@@ -12,10 +12,11 @@ export default function SearchBox() {
 
   return (
     <div className={css["filter-box"]}>
-      <p>Find contacts by name...</p>
+      <p>Find contact by name or number:</p>
       <input
         className={css["filter-input"]}
         type="text"
+        placeholder="Search..."
         value={filter}
         onChange={handleFilterChange}
       />

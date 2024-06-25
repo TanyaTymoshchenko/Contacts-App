@@ -13,14 +13,9 @@ const registerValidationSchema = Yup.object().shape({
   name: Yup.string().required("Required"),
   email: Yup.string().email("Invalid email").required("Required"),
   password: Yup.string().required("Required"),
-  // .min(8, "Password is too short - should be 8 chars minimum.")
-  // .matches(/[A-Z]/, "Password must contain at least one uppercase letter.")
-  // .matches(/[a-z]/, "Password must contain at least one lowercase letter.")
-  // .matches(/[0-9]/, "Password must contain at least one number.")
-  // .matches(
-  //   /[!@#$%^&*(),.?":{}|<>]/,
-  //   "Password must contain at least one special character."
-  // ),
+  confirmPassword: Yup.string()
+    .oneOf([Yup.ref('password'), null], 'Passwords must match')
+    .required('Required'),
 });
 
 const loginInitialValues = {
@@ -31,6 +26,7 @@ const loginInitialValues = {
 const registerInitialValues = {
   ...loginInitialValues,
   name: "",
+  confirmPassword: "",
 };
 
 const BaseForm = ({ children, onSubmit, isRegistrationForm }) => {
@@ -88,6 +84,23 @@ const BaseForm = ({ children, onSubmit, isRegistrationForm }) => {
             component="div"
           />
         </div>
+        {isRegistrationForm && (
+          <div className={css["form-group"]}>
+            <label className={css.label} htmlFor="confirmPassword">
+              Confirm Password
+            </label>
+            <Field
+              className={css["form-field"]}
+              name="confirmPassword"
+              type="password"
+            />
+            <ErrorMessage
+              className={css["error-message"]}
+              name="confirmPassword"
+              component="div"
+            />
+          </div>
+        )}
         {children}
       </Form>
     </Formik>

@@ -7,7 +7,7 @@ import { deleteContact, updateContact } from "../../redux/contacts/operations";
 import { activateSuccessToast } from "../../js/toast";
 
 export default function Contact({ contactData: { name, number, id } }) {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isEditingName, setIsEditingName] = useState(false);
   const [isEditingNumber, setIsEditingNumber] = useState(false);
   const [contactData, setContactData] = useState({ name, number, id });
@@ -21,35 +21,33 @@ export default function Contact({ contactData: { name, number, id } }) {
     setIsEditingNumber((prev) => !prev);
   };
 
-  const handleOnBlur = (e) => {
-    if (e.target.name === "name") {
-      toggleEditingName();
-    } else if (e.target.name === "number") {
-      toggleEditingNumber();
-    }
-
+  const handleOnBlur = () => {
     dispatch(updateContact(contactData));
   };
 
   const editData = (e) => {
-    setContactData((data) => ({
-      ...data,
+    setContactData((prevData) => ({
+      ...prevData,
       [e.target.name]: e.target.value,
     }));
   };
 
-  function openModal() {
-    setIsOpen(true);
-  }
+  const handleDelete = () => {
+    setModalIsOpen(true);
+  };
 
-  function closeModal() {
-    setIsOpen(false);
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const handleConfirmDelete = () => {
     dispatch(deleteContact(id))
       .unwrap()
       .then(() => {
         activateSuccessToast("Contact successfully deleted");
       });
-  }
+    setModalIsOpen(false);
+  };
 
   return (
     <>
@@ -90,7 +88,7 @@ export default function Contact({ contactData: { name, number, id } }) {
             )}
           </div>
         </div>
-        <button className={css["delete-button"]} onClick={openModal}>
+        <button className={css["delete-button"]} onClick={handleDelete}>
           Delete contact
         </button>
       </li>
@@ -98,6 +96,7 @@ export default function Contact({ contactData: { name, number, id } }) {
         closeModal={closeModal}
         modalIsOpen={modalIsOpen}
         type="deleteContactModal"
+        deleteContact={handleConfirmDelete}
       />
     </>
   );
