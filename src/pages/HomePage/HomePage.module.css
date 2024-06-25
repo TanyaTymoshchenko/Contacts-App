@@ -1,0 +1,21 @@
+.content {
+    max-width: 1000px;
+    margin: auto auto;
+    padding: 10px;
+    /* Remove padding-top to align content to the very top */
+    padding-top: 3.5rem;
+}
+
+.subtitle {
+    margin-bottom: 7px;
+    font-size: 1.5rem;
+    color: #333;
+    /* Adjust margin-top to 0 to align subtitle closer to the previous text */
+    margin-top: 1.5rem;
+}
+
+.featureList {
+    list-style-type: disc;
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+}

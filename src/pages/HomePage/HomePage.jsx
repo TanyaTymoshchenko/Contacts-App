@@ -1,17 +1,35 @@
 import Text from "../../components/Text/Text";
 import Container from "../../components/common/Container/Container";
 import Section from "../../components/common/Section/Section";
+import css from "./HomePage.module.css";
 
 const HomePage = () => {
   return (
     <Section type="home-page">
       <Container>
-        <Text isCentered accented>
-          Welcome to the Modern Contacts App! 📖
-        </Text>
-        <Text isCentered>
-           Manage your contacts easily and securely. 🔒
-        </Text>
+        <div className={css.content}>
+          <Text isCentered accented>
+            Welcome to the Modern Contacts App! 📖
+          </Text>
+          <Text isCentered className={css.subtitle}>
+            Manage your contacts easily and securely. 🔒
+          </Text>
+          <Text>
+            <strong>About our Application:</strong>
+          </Text>
+          <Text>
+            Our Phone book application is designed to help you to manage your contacts effortlessly. With our user-friendly interface, you can organize your contacts, add new ones, delete existing ones, and quickly find the information you need.
+          </Text>
+          <Text>
+            <strong>Key Features:</strong>
+          </Text>
+          <ul className={css.featureList}>
+            <li>Safety: Be sure that your contacts are fully protected and no one except you could access them.</li>
+            <li>Effortless Management: streamline contact handling. Organize, delete, and find contacts easily.</li>
+            <li>Time Saving: Save time managing contacts. Quickly add, delete, and search for contacts.</li>
+            <li>User-Friendly Interface: Enjoy an intuitive interface. Easily navigate and use the app with minimal learning curve.</li>
+          </ul>
+        </div>
       </Container>
     </Section>
   );
